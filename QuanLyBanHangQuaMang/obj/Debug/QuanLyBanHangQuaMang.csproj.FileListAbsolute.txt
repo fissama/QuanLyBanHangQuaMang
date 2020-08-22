@@ -1,0 +1,16 @@
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.csprojAssemblyReference.cache
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.ManHinhChinh.resources
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.csproj.GenerateResource.cache
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.csproj.CoreCompileInputs.cache
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\bin\Debug\QuanLyBanHangQuaMang.exe.config
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\bin\Debug\QuanLyBanHangQuaMang.exe
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\bin\Debug\QuanLyBanHangQuaMang.pdb
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.exe
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.pdb
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.Properties.Resources.resources
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.csproj.CopyComplete
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.ChiTietSanPham.resources
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.ManHinhTimKiem.resources
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.sourcelink.json
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\bin\Debug\Newtonsoft.Json.dll
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\bin\Debug\Newtonsoft.Json.xml

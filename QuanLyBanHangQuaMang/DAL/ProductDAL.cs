@@ -6,81 +6,51 @@ using System.Text;
 using System.Threading.Tasks;
 using Oracle.ManagedDataAccess;
 using Oracle.ManagedDataAccess.Client;
+using QuanLyBanHangQuaMang.DTO;
 
-namespace SaleOnline.DAL
+namespace QuanLyBanHangQuaMang.DAL
 {
-    class ProductDAL
+    public class ProductDAL
     {
-        public String pID
-        {
-            get { return pID; }
-            set { pID = value; }
-        }
+        public Product pDAL = new Product();
 
-        public String pName
+        public ProductDAL(int i)
         {
-            get { return pName; }
-            set { pName = value; }
-        }
-
-        public String pCategory
-        {
-            get { return pCategory; }
-            set { pCategory = value; }
-        }
-
-        public float pCost
-        {
-            get { return pCost; }
-            set { pCost = value; }
-        }
-
-        public int pQty
-        {
-            get { return pQty; }
-            set { pQty = value; }
-        }
-
-        public String pImgUrl
-        {
-            get { return pImgUrl; }
-            set { pImgUrl = value; }
-        }
-
-        public ProductDAL() { }
-
-        public ProductDAL LoadProduct(int i)
-        {
-            ProductDAL iProduct = new ProductDAL();
-            String constr = @"Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE)));
-                              User Id=pttk;Password=1";
+            //Product iProduct = new Product();
+            String constr = @"Data Source=(DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-E7O6VVM)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = XE)
+    )
+  );User Id=system;Password=161299";
             OracleConnection con = new OracleConnection(constr);
             con.Open();
 
             // Execute a SQL SELECT
             OracleCommand cmd = con.CreateCommand();
-            cmd.CommandText = "select * from pttk.san_pham where rownum =" + i.ToString() + ";";
+            cmd.CommandText = "select * from pttk.san_pham where MaSP =" + (i).ToString();
             OracleDataReader dr = cmd.ExecuteReader();
 
             if (dr.HasRows)
             {
-                DataTable schemaTable = dr.GetSchemaTable();
                 DataTable data = new DataTable();
-                foreach (DataRow row in schemaTable.Rows)
+                data.Load(dr);
+                foreach (DataRow row in data.Rows)
                 {
-                    iProduct.pID = row["MaSP"].ToString();
-                    iProduct.pName = row["TenSP"].ToString();
-                    iProduct.pCategory = row["LoaiSP"].ToString();
-                    iProduct.pCost = (float)row["Gia"];
-                    iProduct.pQty = (int)row["SLTon"];
-                    iProduct.pImgUrl = row["ImgUrl"].ToString();
+                    this.pDAL.PID = row[0].ToString();
+                    this.pDAL.PName = row[1].ToString();
+                    this.pDAL.PCategory = row[2].ToString();
+                    this.pDAL.PCost = row[3].ToString();
+                    this.pDAL.PQty = row[4].ToString();
+                    this.pDAL.PImgUrl = row[5].ToString();
+                    this.pDAL.PDetail = row[6].ToString();
                 }
             }
             // Clean up
             dr.Dispose();
             cmd.Dispose();
             con.Dispose();
-            return iProduct;
         }
     }
 }

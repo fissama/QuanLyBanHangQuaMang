@@ -63,6 +63,26 @@ namespace QuanLyBanHangQuaMang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _93634 {
+            get {
+                object obj = ResourceManager.GetObject("93634", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b7340fa9d5c62234354588cf4bbe8253 {
+            get {
+                object obj = ResourceManager.GetObject("b7340fa9d5c62234354588cf4bbe8253", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cart1 {
             get {
                 object obj = ResourceManager.GetObject("cart1", resourceCulture);
@@ -73,9 +93,50 @@ namespace QuanLyBanHangQuaMang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap earth_drawing_doodle_1 {
+            get {
+                object obj = ResourceManager.GetObject("earth-drawing-doodle-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap geometric_animals_drawing_clipart_images_gallery_for_free_download_geometric_animal_png_670_473 {
+            get {
+                object obj = ResourceManager.GetObject("geometric-animals-drawing-clipart-images-gallery-for-free-download-geometric-anim" +
+                        "al-png-670_473", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoShop {
             get {
                 object obj = ResourceManager.GetObject("LogoShop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngBareBear {
+            get {
+                object obj = ResourceManager.GetObject("pngBareBear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Product_001 {
+            get {
+                object obj = ResourceManager.GetObject("Product-001", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

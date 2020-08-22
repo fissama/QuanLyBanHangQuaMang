@@ -4,15 +4,34 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QuanLyBanHangQuaMang.BLL;
+//using QuanLyBanHangQuaMang.DTO;
 
 namespace QuanLyBanHangQuaMang
 {
     public partial class ManHinhChinh : Form
     {
+        private static ManHinhChinh instance;
+
+        
+        public static ManHinhChinh Instance
+        {
+            get
+            {
+                if (instance == null) instance = new ManHinhChinh();
+                return ManHinhChinh.instance;
+            }
+            private set { ManHinhChinh.instance = value; }
+        }
+
+        public static int Flat { get => flat; set => flat = value; }
+        private static int flat = 0;
+
         public ManHinhChinh()
         {
             InitializeComponent();
@@ -21,11 +40,8 @@ namespace QuanLyBanHangQuaMang
         private void ManHinhChinh_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSetDemo.TONGHOP' table. You can move, or remove it, as needed.
-            for (int i = 0; i < 12; i++)
-            {
-                
-            }
-
+            ListProductBLL manHinhChinhListProduct = new ListProductBLL(6);
+            this.loadProductPanel(manHinhChinhListProduct);
         }
 
         private void UserSearchTB_Leave(object sender, EventArgs e)
@@ -57,17 +73,165 @@ namespace QuanLyBanHangQuaMang
 
         private void UserSearchB_Click(object sender, EventArgs e)
         {
-
+            ManHinhTimKiem sear1 = new ManHinhTimKiem(UserSearchTB.Text);
+            sear1.Show();
+            ManHinhChinh.Flat = 2;
+            this.Visible = false;
         }
 
         private void UserCart_Click(object sender, EventArgs e)
         {
-            
+            Console.WriteLine("Da click222\n");
         }
 
         private void UserCartB_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void productShow1_Click(object sender, EventArgs e)
+        {
+            ChiTietSanPham pro1 = new ChiTietSanPham(1);
+            pro1.Show();
+            ManHinhChinh.Flat = 1;
+            this.Visible = false;
+              
+        }
+
+        private void productShow2_Click(object sender, EventArgs e)
+        {
+            ChiTietSanPham prod = new ChiTietSanPham(2);
+            prod.Show();
+            ManHinhChinh.Flat = 1;
+            this.Visible = false;
+        }
+
+        private void productShow3_Click(object sender, EventArgs e)
+        {
+            ChiTietSanPham prod = new ChiTietSanPham(3);
+            prod.Show();
+            ManHinhChinh.Flat = 1;
+            this.Visible = false;
+        }
+
+        private void productShow4_Click(object sender, EventArgs e)
+        {
+            ChiTietSanPham prod = new ChiTietSanPham(4);
+            prod.Show();
+            ManHinhChinh.Flat = 1;
+            this.Visible = false;
+        }
+
+        private void productShow5_Click(object sender, EventArgs e)
+        {
+            ChiTietSanPham prod = new ChiTietSanPham(5);
+            prod.Show();
+            ManHinhChinh.Flat = 1;
+            this.Visible = false;
+        }
+
+        private void productShow6_Click(object sender, EventArgs e)
+        {
+            ChiTietSanPham prod = new ChiTietSanPham(6);
+            prod.Show();
+            ManHinhChinh.Flat = 1;
+            this.Visible = false;
+        }
+
+        private void loadProductPanel(ListProductBLL list)
+        {
+           foreach(var el in list.lBLL.lDAL)
+            {
+                switch(Convert.ToInt32(el.PID))
+                {
+                    case 1:
+                        {
+                            this.ProductName1.Text = el.PName;
+                            this.ProductCost1.Text = el.PCost + ".000đ";
+                            var request = WebRequest.Create(el.PImgUrl);
+                            using (var response = request.GetResponse())
+                            using (var stream = response.GetResponseStream())
+                            {
+                                this.ProductPic1.Image = Bitmap.FromStream(stream);
+                            }
+                            break;
+                        }
+                    case 2:
+                        {
+                            this.ProductName2.Text = el.PName;
+                            this.ProductCost2.Text = el.PCost + ".000đ";
+                            var request = WebRequest.Create(el.PImgUrl);
+                            using (var response = request.GetResponse())
+                            using (var stream = response.GetResponseStream())
+                            {
+                                this.ProductPic2.Image = Bitmap.FromStream(stream);
+                            }
+                            break;
+                        }
+                    case 3:
+                        {
+                            this.ProductName3.Text = el.PName;
+                            this.ProductCost3.Text = el.PCost + ".000đ";
+                            var request = WebRequest.Create(el.PImgUrl);
+                            using (var response = request.GetResponse())
+                            using (var stream = response.GetResponseStream())
+                            {
+                                this.ProductPic3.Image = Bitmap.FromStream(stream);
+                            }
+                            break;
+                        }
+                    case 4:
+                        {
+                            this.ProductName4.Text = el.PName;
+                            this.ProductCost4.Text = el.PCost + ".000đ";
+                            var request = WebRequest.Create(el.PImgUrl);
+                            using (var response = request.GetResponse())
+                            using (var stream = response.GetResponseStream())
+                            {
+                                this.ProductPic4.Image = Bitmap.FromStream(stream);
+                            }
+                            break;
+                        }
+                    case 5:
+                        {
+                            this.ProductName5.Text = el.PName;
+                            this.ProductCost5.Text = el.PCost + ".000đ";
+                            var request = WebRequest.Create(el.PImgUrl);
+                            using (var response = request.GetResponse())
+                            using (var stream = response.GetResponseStream())
+                            {
+                                this.ProductPic5.Image = Bitmap.FromStream(stream);
+                            }
+                            break;
+                        }
+                    case 6:
+                        {
+                            this.ProductName6.Text = el.PName;
+                            this.ProductCost6.Text = el.PCost + ".000đ";
+                            var request = WebRequest.Create(el.PImgUrl);
+                            using (var response = request.GetResponse())
+                            using (var stream = response.GetResponseStream())
+                            {
+                                this.ProductPic6.Image = Bitmap.FromStream(stream);
+                            }
+                            break;
+                        }
+                }
+            }
+        }
+
+        private void DanhMucSanPham_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            if (MessageBox.Show("Bạn Có chắc muốn thoát", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
