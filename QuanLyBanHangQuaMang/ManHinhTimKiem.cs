@@ -417,5 +417,22 @@ namespace QuanLyBanHangQuaMang
             prod.Show();
             this.Visible = false;
         }
+
+        private void GioHang_Click(object sender, EventArgs e)
+        {
+            GioHang.Instance.Show();
+            GioHang.Flat = 2;
+            this.Visible = false;
+        }
+
+        /*        public static void increaseQtyCart()
+                {
+                    ManHinhTimKiem.Instance.QtyCart.Text = (Convert.ToInt32(ManHinhTimKiem.Instance.QtyCart.Text) + 1).ToString();
+                }
+
+                public static void decreaseQtyCart()
+                {
+                    ManHinhTimKiem.Instance.QtyCart.Text = (Convert.ToInt32(ManHinhTimKiem.Instance.QtyCart.Text) - 1).ToString();
+                }*/
     }
 }

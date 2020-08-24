@@ -17,5 +17,24 @@ namespace QuanLyBanHangQuaMang.BLL
         {
             this.pBLL = new ProductDAL(i);
         }
+
+        public int checkQty(int iQty)
+        {
+            if (iQty > Convert.ToInt32(this.pBLL.pDAL.PQty))
+                return 1;
+            else if (iQty < 1)
+                return -1;
+            else if (Convert.ToInt32(this.pBLL.pDAL.PQty) == 0)
+            { 
+                return 2;
+            }
+
+            else return 0;
+
+        }
+        public static void checkName(int id, int sl)
+        {
+          
+        }
     }
 }

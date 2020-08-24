@@ -16,11 +16,33 @@ namespace QuanLyBanHangQuaMang
 {
     public partial class ChiTietSanPham : Form
     {
-        int id;
+        private static int id;
+        
+
+        private static ChiTietSanPham instance;
+
+
+        public static ChiTietSanPham Instance
+        {
+            get
+            {
+                if (instance == null) instance = new ChiTietSanPham(ChiTietSanPham.Id);
+                return ChiTietSanPham.instance;
+            }
+            private set { ChiTietSanPham.instance = value; }
+        }
+
+        public static int Id { get => id; set => id = value; }
+
         public ChiTietSanPham(int id)
         {
-            this.id = id;
+            ChiTietSanPham.Id = id;
             InitializeComponent();
+        }
+
+        public static void resetId(int id)
+        {
+            ChiTietSanPham.instance = new ChiTietSanPham(id);
         }
 
         public ChiTietSanPham(Product product)
@@ -95,16 +117,73 @@ namespace QuanLyBanHangQuaMang
 
         private void ChiTietSanPham_Load(object sender, EventArgs e)
         {
-            addDetailProduct(this.id);
+            addDetailProduct(ChiTietSanPham.Id);
         }
 
         private void Back_Load(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             if (ManHinhChinh.Flat == 1)
                 ManHinhChinh.Instance.Visible = true;
             else ManHinhTimKiem.Instance.Visible = true;
             
         }
+
+        private void increase_Click(object sender, EventArgs e)
+        {
+            ProductBLL temp = new ProductBLL(ChiTietSanPham.Id);
+
+            if (temp.checkQty(Convert.ToInt32(BuyQty.Text) + 1) == 0)
+                BuyQty.Text = (Convert.ToInt32(BuyQty.Text) + 1).ToString();
+            else if (temp.checkQty(Convert.ToInt32(BuyQty.Text) + 1) == 1)
+                MessageBox.Show("So luong khong du!");
+            else if (temp.checkQty(Convert.ToInt32(BuyQty.Text) + 1) == 2)
+                MessageBox.Show("Het Hang!");
+        }
+
+        private void BuyNow_Click(object sender, EventArgs e)
+        {
+            /*ManHinhChinh.increaseQtyCart();
+            ManHinhTimKiem.increaseQtyCart();
+            ChiTietSanPham.increaseQtyCart();
+            ChiTietSanPham.Instance.Show();*/
+            
+            if (GioHangBLL.Instance.checkId(Convert.ToInt32(BuyQty.Text), ChiTietSanPham.Id))
+            {
+                GioHang.Instance.reLoad();
+                return;
+            }
+            GioHangBLL.Instance.addGioHang(Convert.ToInt32(BuyQty.Text), ChiTietSanPham.Id);
+            GioHang.Instance.themChiTietGH(Convert.ToInt32(BuyQty.Text), ChiTietSanPham.Id);
+
+        }
+
+        private void GioHang_Click(object sender, EventArgs e)
+        {
+            GioHang.Instance.Show();
+            GioHang.Flat = 3;
+            this.Visible = false;
+        }
+
+        private void decreaseButton_Click(object sender, EventArgs e)
+        {
+            ProductBLL temp = new ProductBLL(ChiTietSanPham.Id);
+            if (temp.checkQty(Convert.ToInt32(BuyQty.Text) - 1) == 0)
+                BuyQty.Text = (Convert.ToInt32(BuyQty.Text) - 1).ToString();
+            else if (temp.checkQty(Convert.ToInt32(BuyQty.Text) - 1) == -1)
+                MessageBox.Show("So luong khong hop le!");
+            else if (temp.checkQty(Convert.ToInt32(BuyQty.Text) - 1) == 2)
+                MessageBox.Show("Het Hang!");
+        }
+
+        /* public static void increaseQtyCart()
+         {
+             ChiTietSanPham.Instance.QtyCart.Text = (Convert.ToInt32(ChiTietSanPham.Instance.QtyCart.Text) + 1).ToString();
+         }
+
+         public static void decreaseQtyCart()
+         {
+             ChiTietSanPham.Instance.QtyCart.Text = (Convert.ToInt32(ChiTietSanPham.Instance.QtyCart.Text) - 1).ToString();
+         }*/
     }
 }

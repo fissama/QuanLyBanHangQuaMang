@@ -63,38 +63,37 @@
             this.DanhMucSanPham = new System.Windows.Forms.TreeView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ProductDetail = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.increase = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.BuyQty = new System.Windows.Forms.TextBox();
             this.ProductCost = new System.Windows.Forms.Label();
             this.BuyNow = new System.Windows.Forms.Button();
             this.ProductName = new System.Windows.Forms.Label();
+            this.ProductPic = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.ProductPic = new System.Windows.Forms.PictureBox();
             this.UserCartB = new System.Windows.Forms.Button();
-            this.UserCart = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.UserCartCount = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.loginB = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.UserCart = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.decreaseButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserCart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserCart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // DanhMucSanPham
@@ -164,9 +163,9 @@
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.LightCyan;
             this.panel2.Controls.Add(this.ProductDetail);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.decreaseButton);
             this.panel2.Controls.Add(this.increase);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.BuyQty);
             this.panel2.Controls.Add(this.ProductCost);
             this.panel2.Controls.Add(this.BuyNow);
             this.panel2.Controls.Add(this.ProductName);
@@ -192,17 +191,6 @@
             this.ProductDetail.TabIndex = 12;
             this.ProductDetail.Text = "Chi tiet san pham";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Linen;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(401, 327);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(43, 45);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "−";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // increase
             // 
             this.increase.BackColor = System.Drawing.Color.Linen;
@@ -213,17 +201,18 @@
             this.increase.TabIndex = 10;
             this.increase.Text = "+";
             this.increase.UseVisualStyleBackColor = false;
+            this.increase.Click += new System.EventHandler(this.increase_Click);
             // 
-            // textBox2
+            // BuyQty
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(444, 327);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(52, 45);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.Text = "1";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BuyQty.Enabled = false;
+            this.BuyQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuyQty.Location = new System.Drawing.Point(444, 327);
+            this.BuyQty.Name = "BuyQty";
+            this.BuyQty.Size = new System.Drawing.Size(52, 45);
+            this.BuyQty.TabIndex = 9;
+            this.BuyQty.Text = "1";
+            this.BuyQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ProductCost
             // 
@@ -247,6 +236,7 @@
             this.BuyNow.TabIndex = 7;
             this.BuyNow.Text = "MUA NGAY";
             this.BuyNow.UseVisualStyleBackColor = false;
+            this.BuyNow.Click += new System.EventHandler(this.BuyNow_Click);
             // 
             // ProductName
             // 
@@ -259,6 +249,15 @@
             this.ProductName.TabIndex = 6;
             this.ProductName.Text = "Chua load product name ne";
             this.ProductName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ProductPic
+            // 
+            this.ProductPic.Location = new System.Drawing.Point(20, 26);
+            this.ProductPic.Name = "ProductPic";
+            this.ProductPic.Size = new System.Drawing.Size(340, 340);
+            this.ProductPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ProductPic.TabIndex = 4;
+            this.ProductPic.TabStop = false;
             // 
             // button3
             // 
@@ -315,26 +314,6 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Back_Load);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.LightCyan;
-            this.pictureBox4.Image = global::QuanLyBanHangQuaMang.Properties.Resources.pngBareBear;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 701);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(300, 150);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
-            // ProductPic
-            // 
-            this.ProductPic.Location = new System.Drawing.Point(20, 26);
-            this.ProductPic.Name = "ProductPic";
-            this.ProductPic.Size = new System.Drawing.Size(340, 340);
-            this.ProductPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ProductPic.TabIndex = 4;
-            this.ProductPic.TabStop = false;
-            // 
             // UserCartB
             // 
             this.UserCartB.BackColor = System.Drawing.Color.Wheat;
@@ -346,29 +325,6 @@
             this.UserCartB.TabIndex = 4;
             this.UserCartB.Text = "Giỏ hàng";
             this.UserCartB.UseVisualStyleBackColor = false;
-            // 
-            // UserCart
-            // 
-            this.UserCart.BackColor = System.Drawing.Color.Wheat;
-            this.UserCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.UserCart.Image = global::QuanLyBanHangQuaMang.Properties.Resources.cart1;
-            this.UserCart.Location = new System.Drawing.Point(1481, 54);
-            this.UserCart.Name = "UserCart";
-            this.UserCart.Size = new System.Drawing.Size(43, 40);
-            this.UserCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.UserCart.TabIndex = 3;
-            this.UserCart.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 120);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
@@ -383,6 +339,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Giỏ hàng";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.GioHang_Click);
             // 
             // UserCartCount
             // 
@@ -396,30 +353,6 @@
             this.UserCartCount.TabIndex = 5;
             this.UserCartCount.Text = "0";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Wheat;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Image = global::QuanLyBanHangQuaMang.Properties.Resources.cart1;
-            this.pictureBox2.Location = new System.Drawing.Point(1104, 49);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkOrange;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(1239, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 26);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "0";
-            // 
             // loginB
             // 
             this.loginB.BackColor = System.Drawing.Color.Bisque;
@@ -432,22 +365,11 @@
             this.loginB.Text = "Đăng nhập";
             this.loginB.UseVisualStyleBackColor = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::QuanLyBanHangQuaMang.Properties.Resources.geometric_animals_drawing_clipart_images_gallery_for_free_download_geometric_animal_png_670_473;
-            this.pictureBox3.Location = new System.Drawing.Point(904, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(194, 120);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.loginB);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.UserCartCount);
             this.panel1.Controls.Add(this.button1);
@@ -458,6 +380,76 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1290, 120);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::QuanLyBanHangQuaMang.Properties.Resources.geometric_animals_drawing_clipart_images_gallery_for_free_download_geometric_animal_png_670_473;
+            this.pictureBox3.Location = new System.Drawing.Point(904, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(194, 120);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Wheat;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Image = global::QuanLyBanHangQuaMang.Properties.Resources.cart1;
+            this.pictureBox2.Location = new System.Drawing.Point(1104, 49);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(34, 28);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.GioHang_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(216, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // UserCart
+            // 
+            this.UserCart.BackColor = System.Drawing.Color.Wheat;
+            this.UserCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.UserCart.Image = global::QuanLyBanHangQuaMang.Properties.Resources.cart1;
+            this.UserCart.Location = new System.Drawing.Point(1481, 54);
+            this.UserCart.Name = "UserCart";
+            this.UserCart.Size = new System.Drawing.Size(43, 40);
+            this.UserCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.UserCart.TabIndex = 3;
+            this.UserCart.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.LightCyan;
+            this.pictureBox4.Image = global::QuanLyBanHangQuaMang.Properties.Resources.pngBareBear;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 701);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(300, 150);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // decreaseButton
+            // 
+            this.decreaseButton.BackColor = System.Drawing.Color.Linen;
+            this.decreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decreaseButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.decreaseButton.Location = new System.Drawing.Point(401, 327);
+            this.decreaseButton.Name = "decreaseButton";
+            this.decreaseButton.Size = new System.Drawing.Size(43, 45);
+            this.decreaseButton.TabIndex = 11;
+            this.decreaseButton.Text = "−";
+            this.decreaseButton.UseVisualStyleBackColor = false;
+            this.decreaseButton.Click += new System.EventHandler(this.decreaseButton_Click);
             // 
             // ChiTietSanPham
             // 
@@ -478,15 +470,15 @@
             this.Load += new System.EventHandler(this.ChiTietSanPham_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserCart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserCart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -503,9 +495,8 @@
         private System.Windows.Forms.Label ProductName;
         private System.Windows.Forms.PictureBox ProductPic;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button increase;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox BuyQty;
         private System.Windows.Forms.TextBox ProductDetail;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button UserCartB;
@@ -514,9 +505,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label UserCartCount;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button loginB;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button decreaseButton;
     }
 }

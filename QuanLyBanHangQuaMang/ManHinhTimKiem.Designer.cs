@@ -121,7 +121,6 @@
             this.UserCart = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.UserCartCount = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.loginB = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -934,6 +933,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Giỏ hàng";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.GioHang_Click);
             // 
             // UserCart
             // 
@@ -958,30 +958,14 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.GioHang_Click);
             // 
             // UserCartCount
             // 
-            this.UserCartCount.AutoSize = true;
-            this.UserCartCount.BackColor = System.Drawing.Color.DarkOrange;
-            this.UserCartCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserCartCount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.UserCartCount.Location = new System.Drawing.Point(1623, 59);
+            this.UserCartCount.Location = new System.Drawing.Point(0, 0);
             this.UserCartCount.Name = "UserCartCount";
-            this.UserCartCount.Size = new System.Drawing.Size(26, 29);
-            this.UserCartCount.TabIndex = 5;
-            this.UserCartCount.Text = "0";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkOrange;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(1239, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 26);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "0";
+            this.UserCartCount.Size = new System.Drawing.Size(100, 23);
+            this.UserCartCount.TabIndex = 17;
             // 
             // loginB
             // 
@@ -1010,7 +994,6 @@
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.loginB);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.UserCartCount);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.UserCart);
@@ -1085,7 +1068,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1152,7 +1134,6 @@
         private System.Windows.Forms.PictureBox UserCart;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label UserCartCount;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button loginB;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;

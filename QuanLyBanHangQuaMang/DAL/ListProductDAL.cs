@@ -7,10 +7,18 @@ using QuanLyBanHangQuaMang.DTO;
 using Oracle.ManagedDataAccess.Client;
 using System.Data;
 
+
 namespace QuanLyBanHangQuaMang.DAL
 {
     public class ListProductDAL
     {
+        public static String constr = @"Data Source=(DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = XE)
+    )
+  );User Id=system;Password=161299";
         //public int lQty;
         public List<Product> lDAL;
         public ListProductDAL()
@@ -18,13 +26,7 @@ namespace QuanLyBanHangQuaMang.DAL
             //ListProductBL lP = new ListProductBL();
             //this.lQty = Qty;
             this.lDAL = new List<Product>();
-            String constr = @"Data Source=(DESCRIPTION =
-    (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
-    (CONNECT_DATA =
-      (SERVER = DEDICATED)
-      (SERVICE_NAME = XE)
-    )
-  );User Id=system;Password=161299";
+    
             OracleConnection con = new OracleConnection(constr);
             con.Open();
 

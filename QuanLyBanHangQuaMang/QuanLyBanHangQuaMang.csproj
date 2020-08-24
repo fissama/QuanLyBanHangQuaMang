@@ -64,8 +64,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\GioHangBLL.cs" />
     <Compile Include="BLL\ListProductBLl.cs" />
     <Compile Include="BLL\ProductBLL.cs" />
+    <Compile Include="BLL\ThanhToanBLL.cs" />
+    <Compile Include="DAL\GioHangDAL.cs" />
     <Compile Include="DAL\ListProductDAL.cs" />
     <Compile Include="DAL\ProductDAL.cs" />
     <Compile Include="ChiTietSanPham.cs">
@@ -74,7 +77,14 @@
     <Compile Include="ChiTietSanPham.Designer.cs">
       <DependentUpon>ChiTietSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAL\ThanhToanDAL.cs" />
     <Compile Include="DTO\Product.cs" />
+    <Compile Include="GioHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GioHang.Designer.cs">
+      <DependentUpon>GioHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManHinhTimKiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +107,12 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThanhToan.Designer.cs">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +139,9 @@
     <EmbeddedResource Include="ChiTietSanPham.resx">
       <DependentUpon>ChiTietSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GioHang.resx">
+      <DependentUpon>GioHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManHinhChinh.resx">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +151,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanhToan.resx">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

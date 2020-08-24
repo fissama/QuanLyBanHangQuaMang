@@ -17,7 +17,6 @@ namespace QuanLyBanHangQuaMang
     public partial class ManHinhChinh : Form
     {
         private static ManHinhChinh instance;
-
         
         public static ManHinhChinh Instance
         {
@@ -30,6 +29,7 @@ namespace QuanLyBanHangQuaMang
         }
 
         public static int Flat { get => flat; set => flat = value; }
+
         private static int flat = 0;
 
         public ManHinhChinh()
@@ -91,8 +91,10 @@ namespace QuanLyBanHangQuaMang
 
         private void productShow1_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham pro1 = new ChiTietSanPham(1);
-            pro1.Show();
+            //ChiTietSanPham pro1 = new ChiTietSanPham(1);
+            //pro1.Show();
+            ChiTietSanPham.resetId(1);
+            ChiTietSanPham.Instance.Show();
             ManHinhChinh.Flat = 1;
             this.Visible = false;
               
@@ -100,40 +102,40 @@ namespace QuanLyBanHangQuaMang
 
         private void productShow2_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(2);
-            prod.Show();
+            ChiTietSanPham.resetId(2);
+            ChiTietSanPham.Instance.Show();
             ManHinhChinh.Flat = 1;
             this.Visible = false;
         }
 
         private void productShow3_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(3);
-            prod.Show();
+            ChiTietSanPham.resetId(3);
+            ChiTietSanPham.Instance.Show();
             ManHinhChinh.Flat = 1;
             this.Visible = false;
         }
 
         private void productShow4_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(4);
-            prod.Show();
+            ChiTietSanPham.resetId(4);
+            ChiTietSanPham.Instance.Show();
             ManHinhChinh.Flat = 1;
             this.Visible = false;
         }
 
         private void productShow5_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(5);
-            prod.Show();
+            ChiTietSanPham.resetId(5);
+            ChiTietSanPham.Instance.Show();
             ManHinhChinh.Flat = 1;
             this.Visible = false;
         }
 
         private void productShow6_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(6);
-            prod.Show();
+            ChiTietSanPham.resetId(6);
+            ChiTietSanPham.Instance.Show();
             ManHinhChinh.Flat = 1;
             this.Visible = false;
         }
@@ -233,5 +235,22 @@ namespace QuanLyBanHangQuaMang
                 e.Cancel = true;
             }
         }
+
+        private void GioHang_Click(object sender, EventArgs e)
+        {
+            GioHang.Instance.Show();
+            GioHang.Flat = 1;
+            this.Visible = false;
+        }
+
+        /* public static void increaseQtyCart()
+         {
+             ManHinhChinh.Instance.QtyCart.Text = (Convert.ToInt32(ManHinhChinh.Instance.QtyCart.Text) + 1).ToString();
+         }
+
+         public static void decreaseQtyCart()
+         {
+             ManHinhChinh.Instance.QtyCart.Text = (Convert.ToInt32(ManHinhChinh.Instance.QtyCart.Text) - 1).ToString();
+         }*/
     }
 }
