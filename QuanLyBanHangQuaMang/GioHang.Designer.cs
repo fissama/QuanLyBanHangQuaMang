@@ -208,6 +208,7 @@
             this.ThanhToan.TabIndex = 5;
             this.ThanhToan.Text = "Thanh Toán";
             this.ThanhToan.UseVisualStyleBackColor = false;
+            this.ThanhToan.Click += new System.EventHandler(this.ThanhToan_Click);
             // 
             // Back
             // 
@@ -234,6 +235,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GioHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GioHang";

@@ -15,4 +15,4 @@ D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaM
 D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\bin\Debug\Newtonsoft.Json.dll
 D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\bin\Debug\Newtonsoft.Json.xml
 D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.GioHang.resources
-D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.ThanhToan.resources
+D:\Code\C#\QuanLyBanHangQuaMang\QuanLyBanHangQuaMang\obj\Debug\QuanLyBanHangQuaMang.MHThanhToan.resources

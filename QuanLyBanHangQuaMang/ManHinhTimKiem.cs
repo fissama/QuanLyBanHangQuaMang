@@ -335,86 +335,86 @@ namespace QuanLyBanHangQuaMang
 
         private void productShow1_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[0]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[0]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
 
         }
 
         private void productShow2_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[1]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[1]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
         }
 
         private void productShow3_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[2]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[2]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
         }
 
         private void productShow4_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[3]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[3]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
         }
 
         private void productShow5_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[4]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[4]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
         }
 
         private void productShow6_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[5]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[5]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
         }
         private void productShow7_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[6]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[6]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
 
         }
 
         private void productShow8_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[7]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[7]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
         }
 
         private void productShow9_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[8]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[8]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
         }
 
         private void productShow10_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[9]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[9]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
         }
 
         private void productShow11_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[10]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[10]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
         }
 
         private void productShow12_Click(object sender, EventArgs e)
         {
-            ChiTietSanPham prod = new ChiTietSanPham(ManHinhTimKiem.productIDList[11]);
-            prod.Show();
+            ChiTietSanPham.resetId(ManHinhTimKiem.productIDList[11]);
+            ChiTietSanPham.Instance.Show();
             this.Visible = false;
         }
 

@@ -57,6 +57,7 @@ namespace QuanLyBanHangQuaMang
             QtyPro.Size = new System.Drawing.Size(123, 30);
             QtyPro.Enabled = false;
             QtyPro.TabIndex = 3;
+            QtyPro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // Name
             TextBox NamePro = new TextBox();
             NamePro.BackColor = System.Drawing.Color.Lavender;
@@ -74,17 +75,19 @@ namespace QuanLyBanHangQuaMang
             TotalPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             TotalPro.Location = new System.Drawing.Point(885, 0);
             TotalPro.Name = "tt1";
-            TotalPro.Text = (Convert.ToInt32(newPro.pBLL.pDAL.PCost) * sl).ToString();
+            TotalPro.Text = (Convert.ToInt32(newPro.pBLL.pDAL.PCost) * sl).ToString()+".000đ";
             TotalPro.Enabled = false;
             TotalPro.Size = new System.Drawing.Size(156, 30);
             TotalPro.TabIndex = 5;
+            TotalPro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // dg1
             TextBox CostPro = new TextBox();
             CostPro.BackColor = System.Drawing.Color.Lavender;
             CostPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             CostPro.Location = new System.Drawing.Point(621, 0);
             CostPro.Name = "dg1";
-            CostPro.Text = newPro.pBLL.pDAL.PCost;
+            CostPro.Text = newPro.pBLL.pDAL.PCost + ".000đ";
+            CostPro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             CostPro.Enabled = false;
             CostPro.Size = new System.Drawing.Size(141, 30);
             CostPro.TabIndex = 4;
@@ -148,6 +151,12 @@ namespace QuanLyBanHangQuaMang
                 ManHinhTimKiem.Instance.Visible = true;
             else if (GioHang.flat == 3)
                 ChiTietSanPham.Instance.Visible = true;
+        }
+
+        private void ThanhToan_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            MHThanhToan.Instance.Show();
         }
     }
 }
